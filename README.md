@@ -4,7 +4,7 @@ Website designed to fit the needs of the Colonel By S.S. Quizbowl Club.
 Some sources of inspiration:
 - http://spaceengine.org/
     - ^ excellent, consistent theme
-- https://www.awwwards.com/sites/networked-insights-1
+- https://www.awwwards.com/sites/networked-insights-1 \ https://web.archive.org/web/20130121063738/http://www.networkedinsights.com/ \ http://www.networkedinsights.com/
     - ^ Nice navigation bar with an actual "banner" in the middle for the logo
     - Nice bar appearing, expanding, and then shrinking a tiny bit when you hover over it  
         -Bar shrinks away into nothing when you hover off
