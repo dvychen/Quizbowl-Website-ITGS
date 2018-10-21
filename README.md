@@ -6,6 +6,8 @@ Some sources of inspiration:
     - ^ excellent, consistent theme
 - https://www.awwwards.com/sites/networked-insights-1
     - ^ Nice navigation bar with an actual "banner" in the middle for the logo
+    - Nice bar appearing, expanding, and then shrinking a tiny bit when you hover over it  
+        -Bar shrinks away into nothing when you hover off
     
 Possible Aesthetic Features: 
 - Cartoony Trivia theme - cartoons/symbols of: 
