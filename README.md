@@ -5,8 +5,8 @@ Some sources of inspiration:
 - http://spaceengine.org/
     - ^ excellent, consistent theme
 - https://www.awwwards.com/sites/networked-insights-1 \ https://web.archive.org/web/20130121063738/http://www.networkedinsights.com/ \ http://www.networkedinsights.com/
-    - ^ Nice navigation bar with an actual "banner" in the middle for the logo
-    - Nice bar appearing, expanding, and then shrinking a tiny bit when you hover over it  
+    - ^ Nice navigation bar with an actual "banner" in the middle for the logo https://www.w3schools.com/graphics/svg_polygon.asp
+    - Nice bar appearing, expanding, and then shrinking a tiny bit when you hover over it $(obj).animate({width: 'toggle'});
         -Bar shrinks away into nothing when you hover off
     
 Possible Aesthetic Features: 
@@ -20,6 +20,6 @@ Possible Aesthetic Features:
     - in front of a cartoon w/ bold outlines pink brain in a (green?) bowl
 - Parallax effect
 - Sliding text
-- Appearing images (opacity)
+- Appearing images 
 -Slideshow
 - Two columns side-by-side rather than one long scroll down?
