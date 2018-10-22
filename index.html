@@ -6,6 +6,7 @@
     }
       nav ul {
         list-style-type: none;
+		top: 0;
         margin: 0;
         padding: 0;
         position: fixed;
@@ -71,10 +72,13 @@
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
-        <li style="width: 20%; margin-top: 0;"> <!--TODO-->
+        <li style="width: 20%; margin-top: 0; background-color: yellow;"> <!--TODO-->
           <a href="index.html">
-            <svg height="18%" width="100%" viewBox="0 0 100 15">
+            <svg height="7em" width="100%" viewBox="0 0 100 18">
               <polygon points="1,-7 9,14 50,22 91,14 99,-7" style="fill:lightgrey;stroke:black;stroke-width:1"/>
+			  <foreignobject x="0" y="0" width="100" height="16">
+			  	<embed src="brain.svg" width="100" height="16"/>
+			  </foreignobject>
             </svg>
           </a>
         </li>
