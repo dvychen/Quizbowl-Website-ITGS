@@ -21,4 +21,5 @@ Possible Aesthetic Features:
 - Parallax effect
 - Sliding text
 - Appearing images (opacity)
+-Slideshow
 - Two columns side-by-side rather than one long scroll down?
