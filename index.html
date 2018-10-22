@@ -1,0 +1,128 @@
+<HTML>
+  <head>
+    <style>
+    nav {
+      line-height: 0.5em;
+    }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        width: 100%;
+      }
+      nav ul li {
+        float: left;
+        text-align: center;
+        margin-top: 1em;
+        /* border-right: 1px solid black; */
+      }
+      /* nav ul li:last-child {
+        border-right: none;
+      } */
+      nav ul li a {
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        padding-bottom: 0;
+        display: block;
+      }
+      nav ul li a.active {
+        color: dodgerblue;
+      }
+      nav ul li a:hover:not(.active) {
+        color: lightgreen;
+      }
+      .navUnderline {
+        display: inline-block;
+        display: none;
+        overflow: hidden;
+      }
+      svg line {
+        stroke:rgb(255,0,0);
+        stroke-width:2
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li style="width: 18%;">
+          <a href="WhatIsQuizbowl.html" class="navElem active" data-item="1">What is Quizbowl</a><br>
+          <svg class="navUnderline" height="2px" width="8em" data-line="1">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+        </li>
+        <li style="width: 6%;">
+          <a href="News.html" class="navElem" data-item="2">News</a><br>
+          <svg class="navUnderline" height="2px" width="2.7em" data-line="2">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+        </li>
+        <li style="width: 11%;">
+          <a href="Resources.html" class="navElem" data-item="3">Resources</a><br>
+          <svg class="navUnderline" height="2px" width="4.5em" data-line="3">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+        </li>
+        <li style="width: 7%;">
+          <a href="Media.html" class="navElem" data-item="4">Media</a><br>
+          <svg class="navUnderline" height="2px" width="3em" data-line="4">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+        </li>
+        <li style="width: 20%; margin-top: 0;"> <!--TODO-->
+          <a href="index.html">
+            <svg height="18%" width="100%" viewBox="0 0 100 15">
+              <polygon points="1,-7 9,14 50,22 91,14 99,-7" style="fill:lightgrey;stroke:black;stroke-width:1"/>
+            </svg>
+          </a>
+        </li>
+        <li style="width: 15%;">
+          <a href= "MeetTheTeam.html" class="navElem" data-item="5">Meet the Team</a><br>
+          <svg class="navUnderline" height="2px" width="6em" data-line="5">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+        </li>
+        <li style="width: 9%;">
+          <a href="Contact.html" class="navElem" data-item="6">Contact</a><br>
+          <svg class="navUnderline" height="2px" width="3.3em" data-line="6">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+        </li>
+        <li style="width: 14%;">
+          <a href="HallOfFame.html" class="navElem" data-item="7">Hall of Fame</a><br>
+          <svg class="navUnderline" height="2px" width="5.5em" data-line="7">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+        </li>
+      </ul>
+    </nav>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br>sss<br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+    </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(() => {
+      var $item = $(".navElem").not(".active");
+      var dataItem;
+      var $line;
+      $item.on("mouseenter", event => {
+        dataItem = $(event.currentTarget).attr("data-item");
+        $line = $("[data-line = '" + dataItem + "']");
+        $line.stop();
+        $line.animate({width: "show"}, 300);
+      }).on("mouseleave", event => {
+        $line.stop();
+        $line.animate({width: "hide"}, 300);
+      });
+    });//jQuery
+    </script>
+  </body>
+</HTML>
