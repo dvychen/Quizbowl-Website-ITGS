@@ -23,6 +23,12 @@
         stroke: #FFDC00;
         stroke-width: 1.5px;
       }
+	  div.flex-container {
+		  display: flex;
+	  }
+	  div.flex-container > div {
+		  width:33%
+	  }
       nav {
         line-height: 0.5em;
         font-family: 'Source Sans Pro', sans-serif;
@@ -149,7 +155,10 @@
       </ul>
     </nav>
     <article>
-      <div> <!--TODO: Put Image on left, and brief synopsis on right-->
+      <div class="flex-container"> <!--TODO: Put Image on left, and brief synopsis on right-->
+      	<div>
+        	yo
+        </div>
         <div class="welcomeContainer">
           <span class="welcomeLetter">W</span><br>
           <span class="welcomeLetter">E</span><br>
@@ -158,9 +167,10 @@
           <span class="welcomeLetter">O</span><br>
           <span class="welcomeLetter">M</span><br>
           <span class="welcomeLetter">E</span>
+       	</div>
+        <div style="display: block;">
+        	hi
         </div>
-      <div class="leftText">
-        hi
       </div>
     </article>
     <footer>
@@ -192,7 +202,6 @@
         $(".bannerPolygon").css("stroke", orgStroke);
       });
       //End of navbar
-
       //Welcome Animation
       $(".welcomeContainer").delay(200).slideDown(1500);
       //Welcome Letter Animations
