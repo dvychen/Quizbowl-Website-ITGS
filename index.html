@@ -1,12 +1,39 @@
 <HTML>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen+Mono|Source+Sans+Pro" rel="stylesheet">
+    <!--
+      font-family: 'Source Sans Pro', sans-serif;
+      font-family: 'Open Sans', sans-serif;
+      font-family: 'Oxygen Mono', monospace;
+    -->
     <style>
-    nav {
-      line-height: 0.5em;
-    }
+      article {
+        margin: 0px 8px 8px 8px;
+        font-family: 'Open Sans', sans-serif;
+      }
+      body {
+        margin: 0;
+      }
+      .banner {
+        width: 20%;
+        margin-top: 0;
+      }
+      .bannerPolygon {
+        fill:#40a553;
+        stroke: #FFDC00;
+        stroke-width: 1.5px;
+      }
+      nav {
+        line-height: 0.5em;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 17px;
+        background-color: white;
+        height: 4.1em;
+        margin-bottom: 10px;
+      }
       nav ul {
         list-style-type: none;
-		top: 0;
+		    top: 0;
         margin: 0;
         padding: 0;
         position: fixed;
@@ -15,12 +42,14 @@
       nav ul li {
         float: left;
         text-align: center;
-        margin-top: 1em;
-        /* border-right: 1px solid black; */
+        height: 1.7em;
       }
-      /* nav ul li:last-child {
-        border-right: none;
-      } */
+      nav ul li:not(.banner) {
+        padding-top: 1.8em;
+        padding-bottom: 0.5em;
+        background-color: white;
+        border-bottom: 2px black solid;
+      }
       nav ul li a {
         text-decoration: none;
         text-align: center;
@@ -32,80 +61,108 @@
         color: dodgerblue;
       }
       nav ul li a:hover:not(.active) {
-        color: lightgreen;
+        color: #001f3f; /*NOTE: find suitable colour*/
       }
       .navUnderline {
         display: inline-block;
         display: none;
         overflow: hidden;
+        height: 3px;
       }
-      svg line {
-        stroke:rgb(255,0,0);
-        stroke-width:2
+      li svg line {
+        stroke: #0074D9; /*NOTE: find suitable colour*/
+        stroke-width: 3;
+      }
+      div.welcomeContainer {
+        display: none;
+        margin-top: 0.5em;
+        font-size: 7em;
+        font-family: 'Oxygen Mono', monospace;
+        text-align: center;
+        line-height: 1em;
+      }
+      div.leftText {
+        display: block;
+        float: left;
       }
     </style>
   </head>
   <body>
     <nav>
+      <svg height="10em" width="100%" style="position: fixed; overflow: visible; margin-top: 8px;">
+        <line x1="0" y1="1.5em" x2="100%" y2="1.5em" style="stroke: white; stroke-width: 4.1em;" />
+        <line x1="0" y1="3.6em" x2="100%" y2="3.6em" style="stroke: black; stroke-width: 2px;" />
+      </svg>
       <ul>
-        <li style="width: 18%;">
+        <li style="width: 16%;">
           <a href="WhatIsQuizbowl.html" class="navElem active" data-item="1">What is Quizbowl</a><br>
-          <svg class="navUnderline" height="2px" width="8em" data-line="1">
+          <svg class="navUnderline" width="8em" data-line="1">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
         <li style="width: 6%;">
           <a href="News.html" class="navElem" data-item="2">News</a><br>
-          <svg class="navUnderline" height="2px" width="2.7em" data-line="2">
+          <svg class="navUnderline" width="2.7em" data-line="2">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
         <li style="width: 11%;">
           <a href="Resources.html" class="navElem" data-item="3">Resources</a><br>
-          <svg class="navUnderline" height="2px" width="4.5em" data-line="3">
+          <svg class="navUnderline" width="4.5em" data-line="3">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
         <li style="width: 7%;">
           <a href="Media.html" class="navElem" data-item="4">Media</a><br>
-          <svg class="navUnderline" height="2px" width="3em" data-line="4">
+          <svg class="navUnderline" width="3em" data-line="4">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
-        <li style="width: 20%; margin-top: 0; background-color: yellow;"> <!--TODO-->
-          <a href="index.html">
-            <svg height="7em" width="100%" viewBox="0 0 100 18">
-              <polygon points="1,-7 9,14 50,22 91,14 99,-7" style="fill:lightgrey;stroke:black;stroke-width:1"/>
-			  <foreignobject x="0" y="0" width="100" height="16">
-			  	<embed src="brain.svg" width="100" height="16"/>
-			  </foreignobject>
-            </svg>
-          </a>
+        <li class="banner">
+          <svg height="8em" width="100%" viewBox="0 0 100 18"> <!--viewBox allows SVG to scale with monitor size-->
+            <a xlink:href="index.html">
+              <polygon points="-6,-56 9,14 50.5,24 91,14 106,-56" class="bannerPolygon"/>
+        		  <foreignobject x="35%" y="-10" width="30" height="30" class="bannerPolygon"> <!--NOTE:Need to edit ths values if logo with different dimensions are used-->
+        		  	<embed src="side-brain.png" width="30" height="30"/>
+        		  </foreignobject>
+            </a>
+          </svg>
         </li>
         <li style="width: 15%;">
           <a href= "MeetTheTeam.html" class="navElem" data-item="5">Meet the Team</a><br>
-          <svg class="navUnderline" height="2px" width="6em" data-line="5">
+          <svg class="navUnderline" width="6.3em" data-line="5">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
-        <li style="width: 9%;">
+        <li style="width: 11%;">
           <a href="Contact.html" class="navElem" data-item="6">Contact</a><br>
-          <svg class="navUnderline" height="2px" width="3.3em" data-line="6">
+          <svg class="navUnderline" width="3.3em" data-line="6">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
         <li style="width: 14%;">
           <a href="HallOfFame.html" class="navElem" data-item="7">Hall of Fame</a><br>
-          <svg class="navUnderline" height="2px" width="5.5em" data-line="7">
-            <line x1="0" y1="0" x2="8em" y2="0"/>
+          <svg class="navUnderline" width="5.5em" data-line="7">
+            <line x1="0" y1="0" x2="8em" y2="0" style="stroke: #FFD700;"/>
           </svg>
         </li>
       </ul>
     </nav>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br>sss<br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <article>
+      <div> <!--TODO: Put Image on left, and brief synopsis on right-->
+        <div class="welcomeContainer">
+          <span class="welcomeLetter">W</span><br>
+          <span class="welcomeLetter">E</span><br>
+          <span class="welcomeLetter">L</span><br>
+          <span class="welcomeLetter">C</span><br>
+          <span class="welcomeLetter">O</span><br>
+          <span class="welcomeLetter">M</span><br>
+          <span class="welcomeLetter">E</span>
+        </div>
+      <div class="leftText">
+        hi
+      </div>
+    </article>
     <footer>
     </footer>
     <script
@@ -114,6 +171,7 @@
     crossorigin="anonymous"></script>
     <script>
     $(document).ready(() => {
+      //navElem Underlines
       var $item = $(".navElem").not(".active");
       var dataItem;
       var $line;
@@ -121,10 +179,34 @@
         dataItem = $(event.currentTarget).attr("data-item");
         $line = $("[data-line = '" + dataItem + "']");
         $line.stop();
-        $line.animate({width: "show"}, 300);
+        $line.animate({width: "show"}, 100);
       }).on("mouseleave", event => {
         $line.stop();
-        $line.animate({width: "hide"}, 300);
+        $line.animate({width: "hide"}, 100);
+      });
+      //Banner Outline
+      var orgStroke = $(".bannerPolygon").css("stroke");
+      $(".bannerPolygon").on("mouseenter", () => {
+        $(".bannerPolygon").css("stroke", "#39CCCC");
+      }).on("mouseleave", () => {
+        $(".bannerPolygon").css("stroke", orgStroke);
+      });
+      //End of navbar
+
+      //Welcome Animation
+      $(".welcomeContainer").delay(200).slideDown(1500);
+      //Welcome Letter Animations
+      var fontSize;
+      $(".welcomeLetter").on("mouseenter", event => {
+        fontSize = parseInt($(event.currentTarget).css("font-size"));
+        for (i=0; i<7; i++) {
+          $(event.currentTarget).delay(200).css("font-size", (fontSize+i));
+        }
+      }).on("mouseleave", event => {
+        fontSize = parseInt($(event.currentTarget).css("font-size"));
+        for (i=0; i<7; i++) {
+          $(event.currentTarget).delay(200).css("font-size", (fontSize-i));
+        }
       });
     });//jQuery
     </script>
