@@ -87,6 +87,13 @@
         text-align: center;
         line-height: 1em;
       }
+	  span.welcomeLetter {
+		  display: inline-block;
+		  transition: 0.9s;
+	  }
+	  /*span.welcomeLetter:hover {
+		  transform: rotateY(360deg);
+	  }*/
       div.leftText {
         display: block;
         float: left;
@@ -159,7 +166,7 @@
       	<div>
         	yo
         </div>
-        <div class="welcomeContainer">
+        <div class="welcomeContainer" style="width: 34%">
           <span class="welcomeLetter">W</span><br>
           <span class="welcomeLetter">E</span><br>
           <span class="welcomeLetter">L</span><br>
@@ -207,16 +214,15 @@
       //Welcome Letter Animations
       var fontSize;
       $(".welcomeLetter").on("mouseenter", event => {
+        /*fontSize = parseInt($(event.currentTarget).css("font-size"));
+        $(event.currentTarget).css("font-size", (fontSize+8));*/
+		$(event.currentTarget).css("transform", "rotateY(360deg)");
+		/*$(event.currentTarget).delay(1000).css("transform", "none");*/
+      })/*.on("mouseleave", event => {
         fontSize = parseInt($(event.currentTarget).css("font-size"));
-        for (i=0; i<7; i++) {
-          $(event.currentTarget).delay(200).css("font-size", (fontSize+i));
-        }
-      }).on("mouseleave", event => {
-        fontSize = parseInt($(event.currentTarget).css("font-size"));
-        for (i=0; i<7; i++) {
-          $(event.currentTarget).delay(200).css("font-size", (fontSize-i));
-        }
-      });
+        $(event.currentTarget).delay(200).css("font-size", (fontSize-7));
+		$(event.currentTarget).delay(10000).css("transform", "none");
+      });*/
     });//jQuery
     </script>
   </body>
