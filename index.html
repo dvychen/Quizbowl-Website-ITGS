@@ -23,12 +23,12 @@
         stroke: #FFDC00;
         stroke-width: 1.5px;
       }
-	  div.flex-container {
-		  display: flex;
-	  }
-	  div.flex-container > div {
-		  width:33%
-	  }
+  	  div.flex-container {
+  		  display: flex;
+  	  }
+  	  div.flex-container > div {
+  		  width:33%
+  	  }
       nav {
         line-height: 0.5em;
         font-family: 'Source Sans Pro', sans-serif;
@@ -39,10 +39,11 @@
       }
       nav ul {
         list-style-type: none;
-		    top: 0;
+  		  top: 0;
         margin: 0;
         padding: 0;
         position: fixed;
+        z-index: 1;
         width: 100%;
       }
       nav ul li {
@@ -87,13 +88,15 @@
         text-align: center;
         line-height: 1em;
       }
-	  span.welcomeLetter {
-		  display: inline-block;
-		  transition: 0.9s;
-	  }
-	  /*span.welcomeLetter:hover {
-		  transform: rotateY(360deg);
-	  }*/
+  	  span.welcomeLetter {
+  		  display: inline-block;
+  		  transition: 0.9s;
+        position: relative;
+        z-index: 0;
+  	  }
+  	  /*span.welcomeLetter:hover {
+  		  transform: rotateY(360deg);
+  	  }*/
       div.leftText {
         display: block;
         float: left;
@@ -217,6 +220,7 @@
         /*fontSize = parseInt($(event.currentTarget).css("font-size"));
         $(event.currentTarget).css("font-size", (fontSize+8));*/
 		$(event.currentTarget).css("transform", "rotateY(360deg)");
+    $(event.currentTarget).css("zIndex", "0");
 		/*$(event.currentTarget).delay(1000).css("transform", "none");*/
       })/*.on("mouseleave", event => {
         fontSize = parseInt($(event.currentTarget).css("font-size"));
