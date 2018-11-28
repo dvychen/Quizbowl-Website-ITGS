@@ -23,3 +23,13 @@ Possible Aesthetic Features:
 - Appearing images 
 -Slideshow
 - Two columns side-by-side rather than one long scroll down?
+
+Consultation w/ Xiao (Nov. 27, 2018):
+Entire site should have very light bluish hue
+
+Welcome Page:
+	Welcome Text: Transparent gradient background
+	Background:
+		Slideshow: Images of stuff (i.e. classroom, buzzer, ask yearbook)
+Most pages - white background (coloured line to separate stuff)
+
