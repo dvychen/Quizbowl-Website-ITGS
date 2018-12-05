@@ -6,79 +6,17 @@
       font-family: 'Open Sans', sans-serif;
       font-family: 'Oxygen Mono', monospace;
     -->
+    <link href="navbar.css" rel="stylesheet" type="text/css">
     <style>
       article {
         margin: 0px 8px 8px 8px;
         font-family: 'Open Sans', sans-serif;
       }
-      body {
-        margin: 0;
+      div.flex-container {
+          display: flex;
       }
-      .banner {
-        width: 20%;
-        margin-top: 0;
-      }
-      .bannerPolygon {
-        fill:#40a553;
-        stroke: #FFDC00;
-        stroke-width: 1.5px;
-      }
-  	  div.flex-container {
-  		  display: flex;
-  	  }
-  	  div.flex-container > div {
-  		  width:33%
-  	  }
-      nav {
-        line-height: 0.5em;
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 17px;
-        background-color: white;
-        height: 4.1em;
-        margin-bottom: 10px;
-      }
-      nav ul {
-        list-style-type: none;
-  		  top: 0;
-        margin: 0;
-        padding: 0;
-        position: fixed;
-        z-index: 1;
-        width: 100%;
-      }
-      nav ul li {
-        float: left;
-        text-align: center;
-        height: 1.7em;
-      }
-      nav ul li:not(.banner) {
-        padding-top: 1.8em;
-        padding-bottom: 0.5em;
-        background-color: white;
-        border-bottom: 2px black solid;
-      }
-      nav ul li a {
-        text-decoration: none;
-        text-align: center;
-        color: black;
-        padding-bottom: 0;
-        display: block;
-      }
-      nav ul li a.active {
-        color: dodgerblue;
-      }
-      nav ul li a:hover:not(.active) {
-        color: #001f3f; /*NOTE: find suitable colour*/
-      }
-      .navUnderline {
-        display: inline-block;
-        display: none;
-        overflow: hidden;
-        height: 3px;
-      }
-      li svg line {
-        stroke: #0074D9; /*NOTE: find suitable colour*/
-        stroke-width: 3;
+      div.flex-container > div {
+          width:33%
       }
       div.welcomeContainer {
         display: none;
@@ -87,20 +25,15 @@
         font-family: 'Oxygen Mono', monospace;
         text-align: center;
         line-height: 1em;
-        background: linear-gradient(dodgerblue, lightblue); /*dark blue to very light blue*/
       }
-  	  span.welcomeLetter {
-  		  display: inline-block;
-  		  transition: 0.9s;
-        position: relative;
-        z-index: 0;
-  	  }
-  	  /*span.welcomeLetter:hover {
-  		  transform: rotateY(360deg);
-  	  }*/
       div.leftText {
         display: block;
         float: left;
+      }
+      .rotate90cw {
+        -ms-transform: rotate(90deg); /* IE 9 */
+        -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+        transform: rotate(90deg);
       }
     </style>
   </head>
