@@ -26,6 +26,9 @@ Possible Aesthetic Features:
 
 Consultation w/ Xiao (Nov. 27, 2018):
 Entire site should have very light bluish hue
+Potential colour schemes: 
+- https://visme.co/blog/wp-content/uploads/2016/09/website21-1024x512.jpg
+- https://visme.co/blog/wp-content/uploads/2016/09/website42-1024x512.jpg
 
 Welcome Page:
 	Welcome Text: Transparent gradient background
