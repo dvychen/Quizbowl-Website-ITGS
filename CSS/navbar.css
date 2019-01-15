@@ -5,6 +5,9 @@ body {
 .banner {
   width: 20%;
   margin-top: 0;
+  background-color: white;
+  height: 4em;
+  border-bottom: black 2px solid;
 }
 .bannerPolygon {
   fill:#40a553;
