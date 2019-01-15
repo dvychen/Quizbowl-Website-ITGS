@@ -2,15 +2,17 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen+Mono|Source+Sans+Pro|Staatliches|Luckiest+Guy|Passion+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
-    <!--
-      font-family: 'Source Sans Pro', sans-serif;
-      font-family: 'Open Sans', sans-serif;
-      font-family: 'Oxygen Mono', monospace;
-    -->
     <style>
       article {
         margin: 0px 8px 8px 8px;
         font-family: 'Open Sans', sans-serif;
+      }
+      .banner {
+        width: 20%;
+        margin-top: 0;
+        background-color: white;
+        height: 4em;
+        border-bottom: black 2px solid;
       }
       div.flex-container {
         display: flex;
@@ -26,9 +28,9 @@
         display: none;
         margin-top: 0.5em;
         font-size: 7em;
-        font-family: 'Oxygen Mono', monospace;
+        font-family: 'Consolas', monospace;
         text-align: center;
-        line-height: 1em;
+        line-height: 0.8em;
         background: linear-gradient(dodgerblue, lightblue); /*dark blue to very light blue*/
       }
       span.welcomeLetter {
@@ -36,6 +38,7 @@
         transition: 0.9s;
         position: relative;
         z-index: 0;
+        transform: rotateY(5deg);
       }
       /*span.welcomeLetter:hover {
         transform: rotateY(360deg);
@@ -106,13 +109,13 @@
     <article>
       <center><div class="welcomeContainer" style="width: 16.5%; margin: 0;">
         <br>
-        <span class="welcomeLetter">W</span><br>
-        <span class="welcomeLetter">E</span><br>
-        <span class="welcomeLetter">L</span><br>
-        <span class="welcomeLetter">C</span><br>
-        <span class="welcomeLetter">O</span><br>
-        <span class="welcomeLetter">M</span><br>
-        <span class="welcomeLetter" style="margin-bottom: 0.6em">E</span>
+        <span class="welcomeLetter" rotY="0">W</span><br>
+        <span class="welcomeLetter" rotY="0">E</span><br>
+        <span class="welcomeLetter" rotY="0">L</span><br>
+        <span class="welcomeLetter" rotY="0">C</span><br>
+        <span class="welcomeLetter" rotY="0">O</span><br>
+        <span class="welcomeLetter" rotY="0">M</span><br>
+        <span class="welcomeLetter" style="margin-bottom: 0.6em" rotY="0">E</span>
       </center>
     </article>
     <footer>
@@ -127,18 +130,12 @@
       //Welcome Animation
       $(".welcomeContainer").delay(200).slideDown(1500);
       //Welcome Letter Animations
-      var fontSize;
+      var rotY;
       $(".welcomeLetter").on("mouseenter", event => {
-        /*fontSize = parseInt($(event.currentTarget).css("font-size"));
-        $(event.currentTarget).css("font-size", (fontSize+8));*/
-		$(event.currentTarget).css("transform", "rotateY(360deg)");
-    $(event.currentTarget).css("zIndex", "0");
-		/*$(event.currentTarget).delay(1000).css("transform", "none");*/
-      })/*.on("mouseleave", event => {
-        fontSize = parseInt($(event.currentTarget).css("font-size"));
-        $(event.currentTarget).delay(200).css("font-size", (fontSize-7));
-		$(event.currentTarget).delay(10000).css("transform", "none");
-      });*/
+        rotY = Number($(event.currentTarget).attr("rotY")) + 360;
+    		$(event.currentTarget).css("transform", "rotateY("+ (rotY) + "deg)");
+        $(event.currentTarget).attr("rotY", rotY);
+      });
     });//jQuery
     </script>
   </body>
