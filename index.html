@@ -1,7 +1,7 @@
 <HTML>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen+Mono|Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen+Mono|Source+Sans+Pro|Staatliches|Luckiest+Guy|Passion+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
     <!--
       font-family: 'Source Sans Pro', sans-serif;
       font-family: 'Open Sans', sans-serif;
@@ -50,7 +50,7 @@
       </svg>
       <ul>
         <li style="width: 16%;">
-          <a href="WhatIsQuizbowl.html" class="navElem active" data-item="1">What is Quizbowl</a><br>
+          <a href="WhatIsQuizbowl.html" class="navElem" data-item="1">What is Quizbowl</a><br>
           <svg class="navUnderline" width="8em" data-line="1">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
@@ -75,10 +75,10 @@
         </li>
         <li class="banner">
           <svg height="8em" width="100%" viewBox="0 0 100 18"> <!--viewBox allows SVG to scale with monitor size-->
-            <a xlink:href="index.html">
+            <a href="index.html">
               <polygon points="-6,-56 9,14 50.5,24 91,14 106,-56" class="bannerPolygon"/>
         		  <foreignobject x="35%" y="-10" width="30" height="30" class="bannerPolygon"> <!--NOTE:Need to edit ths values if logo with different dimensions are used-->
-        		  	<embed src="side-brain.png" width="30" height="30"/>
+        		  	<embed src="Images/QuizbowlLogo.png" width="30" height="30"/>
         		  </foreignobject>
             </a>
           </svg>
@@ -121,29 +121,9 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+    <script src="Scripts/navbar.js"></script>
     <script>
     $(document).ready(() => {
-      //navElem Underlines
-      var $item = $(".navElem").not(".active");
-      var dataItem;
-      var $line;
-      $item.on("mouseenter", event => {
-        dataItem = $(event.currentTarget).attr("data-item");
-        $line = $("[data-line = '" + dataItem + "']");
-        $line.stop();
-        $line.animate({width: "show"}, 100);
-      }).on("mouseleave", event => {
-        $line.stop();
-        $line.animate({width: "hide"}, 100);
-      });
-      //Banner Outline
-      var orgStroke = $(".bannerPolygon").css("stroke");
-      $(".bannerPolygon").on("mouseenter", () => {
-        $(".bannerPolygon").css("stroke", "#39CCCC");
-      }).on("mouseleave", () => {
-        $(".bannerPolygon").css("stroke", orgStroke);
-      });
-      //End of navbar
       //Welcome Animation
       $(".welcomeContainer").delay(200).slideDown(1500);
       //Welcome Letter Animations
