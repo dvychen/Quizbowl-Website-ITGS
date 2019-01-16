@@ -1,0 +1,14 @@
+header {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  margin-top: 0;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 4px;
+  padding-top: 175px;
+  padding-bottom: 175px;
+  font-family: 'Passion One', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
