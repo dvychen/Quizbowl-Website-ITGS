@@ -2,100 +2,164 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen+Mono|Source+Sans+Pro|Staatliches|Luckiest+Guy|Passion+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/header.css">
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
     <style>
       header {
         background-image: url(Images/QuizbowlClub_Backs.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-attachment: fixed;
-        margin-top: 0;
-
         color: orange;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 4px;
         font-size: 180px;
-        padding-top: 175px;
-        padding-bottom: 175px;
-        font-family: 'Passion One', sans-serif;
       }
-      article {
-        padding: 5px 5px 5px 5px;
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #dddddd;
+        border-top: 2px solid #dddddd;
+      }
+      .flex-container > div {
+        background-color: white;
+        margin: 0 0.1% 2px 0;
+        padding: 1% 1% 1% 1%;
+        text-align: center;
+        font-size: 26px;
+        word-wrap: break-word;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 12em;
+      }
+      div.even-flex {
+        margin: 0 0 2px 0;
+      }
+      .flex-container > div:not(.img-container) {
+        width: 37.95%; /* 100 - 0.1/2 - (6*2*2)/2 = 37.95*/
+        padding: 1% 6% 1% 6%;
+      }
+      .img-container {
+        width: 47.95%; /* 100 - 0.1/2 - (2*2*1)/2 = 47.95*/
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      .img-container img {
+        max-height: 12em;
+        max-width: 80%;
+        border: 2px solid orange;
       }
     </style>
   </head>
   <body>
-    <nav style="margin-bottom: 0;">
-      <!-- <svg height="10em" width="100%" style="position: fixed; overflow: visible; margin-top: 8px;">
-        <line x1="0" y1="1.5em" x2="100%" y2="1.5em" style="stroke: white; stroke-width: 4.1em;" />
-        <line x1="0" y1="3.6em" x2="100%" y2="3.6em" style="stroke: black; stroke-width: 2px;" />
-      </svg> -->
+    <nav>
       <ul>
-        <li style="width: 16%;">
-          <a href="WhatIsQuizbowl.html" class="navElem active" data-item="1">What is Quizbowl</a><br>
-          <svg class="navUnderline" width="8em" data-line="1">
-            <line x1="0" y1="0" x2="8em" y2="0"/>
-          </svg>
+        <li style="width: 16%;" class="dropdown">
+          <a href="WhatIsQuizbowl.html" class="navElem active" data-item="1">What is Quizbowl &nbsp;<span class="downArrow"></a><br>
+            <svg class="navUnderline" width="7.4em" data-line="1">
+              <line x1="0" y1="0" x2="10em" y2="0"/>
+            </svg>
+          <div class="dropdown-content" style="margin-left: 3.4%; width: 12.6%;">
+            <a href="FAQ.html"><span>FAQ</span></a>
+          </div>
         </li>
-        <li style="width: 6%;">
-          <a href="News.html" class="navElem" data-item="2">News</a><br>
-          <svg class="navUnderline" width="2.7em" data-line="2">
+        <li style="width: 6%;" class="dropdown">
+          <a href="News.html" class="navElem" data-item="2">News &nbsp;<span class="downArrow"></a><br>
+          <svg class="navUnderline" width="2.8em" data-line="2">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
+          <div class="dropdown-content" style="margin-left: 1%; width: 6%;">
+            <a href="Calendar.html"><span>Calendar</span></a>
+          </div>
         </li>
         <li style="width: 11%;">
           <a href="Resources.html" class="navElem" data-item="3">Resources</a><br>
-          <svg class="navUnderline" width="4.5em" data-line="3">
+          <svg class="navUnderline" width="4.4em" data-line="3">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
-        <li style="width: 7%;">
-          <a href="Media.html" class="navElem" data-item="4">Media</a><br>
+        <li style="width: 7%;" class="dropdown">
+          <a href="Media.html" class="navElem" data-item="4">Media &nbsp;<span class="downArrow"></span></a><br>
           <svg class="navUnderline" width="3em" data-line="4">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
+          <div class="dropdown-content" style="margin-left: 1.4%; width: 6%;">
+            <a href="Gallery.html"><span>Gallery</span></a>
+            <a href="Videos.html"><span>Videos</span></a>
+          </div>
         </li>
         <li class="banner">
           <svg height="8em" width="100%" viewBox="0 0 100 18"> <!--viewBox allows SVG to scale with monitor size-->
             <a href="index.html">
               <polygon points="-6,-56 9,14 50.5,24 91,14 106,-56" class="bannerPolygon"/>
-        		  <foreignobject x="35%" y="-10" width="30" height="30" class="bannerPolygon"> <!--NOTE:Need to edit ths values if logo with different dimensions are used-->
-        		  	<embed src="Images/QuizbowlLogo.png" width="30" height="30"/>
-        		  </foreignobject>
+              <foreignobject x="35%" y="-10" width="30" height="30" class="bannerPolygon"> <!--NOTE:Need to edit ths values if logo with different dimensions are used-->
+                <embed src="Images/QuizbowlLogo.png" width="30" height="30"/>
+              </foreignobject>
             </a>
           </svg>
         </li>
         <li style="width: 15%;">
           <a href= "MeetTheTeam.html" class="navElem" data-item="5">Meet the Team</a><br>
-          <svg class="navUnderline" width="6.3em" data-line="5">
+          <svg class="navUnderline" width="5.5em" data-line="5">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
-        <li style="width: 11%;">
-          <a href="Contact.html" class="navElem" data-item="6">Contact</a><br>
-          <svg class="navUnderline" width="3.3em" data-line="6">
+        <li style="width: 11%;" class="dropdown">
+          <a href="Contact.html" class="navElem" data-item="6">Contact &nbsp;<span class="downArrow"></span></a><br>
+          <svg class="navUnderline" width="4em" data-line="6">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
+          <div class="dropdown-content" style="margin-left: 3%; width: 11%;">
+            <a href="SignUp.html"><span>Sign Up</span></a>
+          </div>
         </li>
         <li style="width: 14%;">
-          <a href="HallOfFame.html" class="navElem" data-item="7">Hall of Fame</a><br>
-          <svg class="navUnderline" width="5.5em" data-line="7">
+          <a href="HallOfFame.html" class="navElem gilded" data-item="7">Hall of Fame</a><br>
+          <svg class="navUnderline" width="5em" data-line="7">
             <line x1="0" y1="0" x2="8em" y2="0" style="stroke: #FFD700;"/>
           </svg>
         </li>
       </ul>
     </nav>
-    <center>
-      <header>
-        What is Quizbowl?
-      </header>
-    </center>
-    <article>
-      1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1
-      <br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>
-      1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>
-    </article>
+    <div class="container">
+      <center>
+        <header>
+          What is Quizbowl?
+        </header>
+      </center>
+      <div class="flex-container">
+        <div id="pic1" class="img-container">
+          <center><img src="Images/QuizbowlTournament_CompetitionPicture.jpg"/></center>
+        </div>
+        <div class="even-flex">
+          <p>
+            Quizbowl is a fun and exciting test of knowledge and wits for everyone!
+            Each round, players are divided into two teams and race to answer trivia questions the fastest.
+            Whoever answers the most comes out on top to win! It’s like Jeopardy, but more exciting and fast-paced!
+          </p>
+        </div>
+        <div>
+          <p> Quizbowl is comprised of many topics, including literature, science, fine arts, history, geography, RMP (religion, mythology, philosophy), pop culture, social science, and current events.
+            There’s a topic for all!
+          </p>
+        </div>
+        <div id="pic2" class="even-flex img-container">
+          <center><img src="Images/QuizbowlClub_PaperPerspective.jpg"/></center>
+        </div>
+        <div id="pic3" class="img-container">
+          <center><img src="Images/QuizbowlClub_Studying.jpg"/></center>
+        </div>
+        <div class="even-flex">
+          <p>
+            Quizbowl usually attends a total of four regional tournaments, including the Ottawa Novice Bowl (for beginners),
+            the regional Quiz Bowl, Reach for the Top (quick format quizbowl), and the regional History Bowl (a competition focusing solely on history).
+          </p>
+        </div>
+      </div>
+    </div>
     <footer>
+      Website Created by David Chen &#8226;
+      <a href="Contact.html"> Colonel By Secondary School</a> &#8226;
+      <a href="#top"> Back to Top</a>
+      <!-- <img src="Images/QuizbowlLogo.png" style="max-height: 90%; display: inline;" /> -->
     </footer>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
