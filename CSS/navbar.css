@@ -1,7 +1,12 @@
-
+/* #0085d8 is the blue theme colour */
 body {
   margin: 0;
 }
+.container {
+  margin: 0 10px 0 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
 .banner {
   width: 20%;
   margin-top: 0;
@@ -14,10 +19,55 @@ body {
   stroke: #FFDC00;
   stroke-width: 1.5px;
 }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-left: 3px solid #019eff;
+  background-color: #f9f9f9;
+  /*margin-left: ;
+  width: ;*/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+  padding: 12px 16px;
+  margin-left: 0;
+  height: 2em;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown-content a:not(:last-child) {
+  border-bottom: 1px grey solid;
+}
+.dropdown-content span {
+  font-size: 1em;
+  line-height: 2em;
+}
+.downArrow { /*NOTE Could use as CSS mainpulation*/
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.gilded:hover {
+  color: #dbb800;
+}
 nav {
+  text-transform: uppercase;
+  /* font-weight: bold; */
   line-height: 0.5em;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 17px;
+  font-family: "Staatliches", sans-serif;
+  font-size: 20px;
   background-color: white;
   height: 4.1em;
   margin-bottom: 0;
@@ -51,9 +101,14 @@ nav ul li a {
 }
 nav ul li a.active {
   color: dodgerblue;
+  /* pointer-events: none; */
+  cursor: default;
 }
-nav ul li a:hover:not(.active) {
-  color: #001f3f; /*NOTE: find suitable colour*/
+nav ul li a:hover:not(.active):not(.gilded), .dropdown:hover .dropbtn {
+  color: #0085d8;
+}
+nav ul li a:hover > .downArrow {
+  border-color: #0085d8;
 }
 .navUnderline {
   display: inline-block;
@@ -62,6 +117,6 @@ nav ul li a:hover:not(.active) {
   height: 3px;
 }
 li svg line {
-  stroke: #0074D9; /*NOTE: find suitable colour*/
+  stroke: #0085d8;
   stroke-width: 3;
 }
