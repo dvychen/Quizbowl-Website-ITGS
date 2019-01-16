@@ -2,6 +2,7 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen+Mono|Source+Sans+Pro|Staatliches|Luckiest+Guy|Passion+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
     <style>
       article {
         margin: 0px 8px 8px 8px;
@@ -16,22 +17,17 @@
       }
       div.flex-container {
         display: flex;
+        width: 100%;
       }
-      div.flex-container > div {
-        width:33%
-      }
-      div.leftText {
-        display: block;
-        float: left;
-      }
+
       div.welcomeContainer {
         display: none;
-        margin-top: 0.5em;
+        margin: 0.5em 0 0 0;
         font-size: 7em;
-        font-family: 'Consolas', monospace;
+        font-family: "Passion One", monospace;
         text-align: center;
         line-height: 0.8em;
-        background: linear-gradient(dodgerblue, lightblue); /*dark blue to very light blue*/
+        background: linear-gradient(#009bff, #a3dbff); /*dark blue to very light blue*/
       }
       span.welcomeLetter {
         display: inline-block;
@@ -40,74 +36,99 @@
         z-index: 0;
         transform: rotateY(5deg);
       }
-      /*span.welcomeLetter:hover {
-        transform: rotateY(360deg);
-      }*/
+      #slideshow1, #slideshow2 {
+        width: 41.7%;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #slideshow1 > div, #slideshow2 > div {
+        position: absolute;
+        width: 41.65%;
+      }
+      #slideshow1 > div > img, #slideshow2 > div > img {
+        max-width: 100%;
+      }
     </style>
   </head>
   <body>
     <nav>
-      <svg height="10em" width="100%" style="position: fixed; overflow: visible; margin-top: 8px;">
-        <line x1="0" y1="1.5em" x2="100%" y2="1.5em" style="stroke: white; stroke-width: 4.1em;" />
-        <line x1="0" y1="3.6em" x2="100%" y2="3.6em" style="stroke: black; stroke-width: 2px;" />
-      </svg>
       <ul>
-        <li style="width: 16%;">
-          <a href="WhatIsQuizbowl.html" class="navElem" data-item="1">What is Quizbowl</a><br>
-          <svg class="navUnderline" width="8em" data-line="1">
-            <line x1="0" y1="0" x2="8em" y2="0"/>
-          </svg>
+        <li style="width: 16%;" class="dropdown">
+          <a href="WhatIsQuizbowl.html" class="navElem" data-item="1">What is Quizbowl &nbsp;<span class="downArrow"></a><br>
+            <svg class="navUnderline" width="7.4em" data-line="1">
+              <line x1="0" y1="0" x2="10em" y2="0"/>
+            </svg>
+          <div class="dropdown-content" style="margin-left: 3.4%; width: 12.6%;">
+            <a href="FAQ.html"><span>FAQ</span></a>
+          </div>
         </li>
-        <li style="width: 6%;">
-          <a href="News.html" class="navElem" data-item="2">News</a><br>
-          <svg class="navUnderline" width="2.7em" data-line="2">
+        <li style="width: 6%;" class="dropdown">
+          <a href="News.html" class="navElem" data-item="2">News &nbsp;<span class="downArrow"></a><br>
+          <svg class="navUnderline" width="2.8em" data-line="2">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
+          <div class="dropdown-content" style="margin-left: 1%; width: 6%;">
+            <a href="Calendar.html"><span>Calendar</span></a>
+          </div>
         </li>
         <li style="width: 11%;">
           <a href="Resources.html" class="navElem" data-item="3">Resources</a><br>
-          <svg class="navUnderline" width="4.5em" data-line="3">
+          <svg class="navUnderline" width="4.4em" data-line="3">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
-        <li style="width: 7%;">
-          <a href="Media.html" class="navElem" data-item="4">Media</a><br>
+        <li style="width: 7%;" class="dropdown">
+          <a href="Media.html" class="navElem" data-item="4">Media &nbsp;<span class="downArrow"></span></a><br>
           <svg class="navUnderline" width="3em" data-line="4">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
+          <div class="dropdown-content" style="margin-left: 1.4%; width: 6%;">
+            <a href="Gallery.html"><span>Gallery</span></a>
+            <a href="Videos.html"><span>Videos</span></a>
+          </div>
         </li>
         <li class="banner">
           <svg height="8em" width="100%" viewBox="0 0 100 18"> <!--viewBox allows SVG to scale with monitor size-->
             <a href="index.html">
               <polygon points="-6,-56 9,14 50.5,24 91,14 106,-56" class="bannerPolygon"/>
-        		  <foreignobject x="35%" y="-10" width="30" height="30" class="bannerPolygon"> <!--NOTE:Need to edit ths values if logo with different dimensions are used-->
-        		  	<embed src="Images/QuizbowlLogo.png" width="30" height="30"/>
-        		  </foreignobject>
+              <foreignobject x="35%" y="-10" width="30" height="30" class="bannerPolygon"> <!--NOTE:Need to edit ths values if logo with different dimensions are used-->
+                <embed src="Images/QuizbowlLogo.png" width="30" height="30"/>
+              </foreignobject>
             </a>
           </svg>
         </li>
         <li style="width: 15%;">
           <a href= "MeetTheTeam.html" class="navElem" data-item="5">Meet the Team</a><br>
-          <svg class="navUnderline" width="6.3em" data-line="5">
+          <svg class="navUnderline" width="5.5em" data-line="5">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
         </li>
-        <li style="width: 11%;">
-          <a href="Contact.html" class="navElem" data-item="6">Contact</a><br>
-          <svg class="navUnderline" width="3.3em" data-line="6">
+        <li style="width: 11%;" class="dropdown">
+          <a href="Contact.html" class="navElem" data-item="6">Contact &nbsp;<span class="downArrow"></span></a><br>
+          <svg class="navUnderline" width="4em" data-line="6">
             <line x1="0" y1="0" x2="8em" y2="0"/>
           </svg>
+          <div class="dropdown-content" style="margin-left: 3%; width: 11%;">
+            <a href="SignUp.html"><span>Sign Up</span></a>
+          </div>
         </li>
         <li style="width: 14%;">
-          <a href="HallOfFame.html" class="navElem" data-item="7">Hall of Fame</a><br>
-          <svg class="navUnderline" width="5.5em" data-line="7">
+          <a href="HallOfFame.html" class="navElem gilded" data-item="7">Hall of Fame</a><br>
+          <svg class="navUnderline" width="5em" data-line="7">
             <line x1="0" y1="0" x2="8em" y2="0" style="stroke: #FFD700;"/>
           </svg>
         </li>
       </ul>
     </nav>
-    <article>
-      <center><div class="welcomeContainer" style="width: 16.5%; margin: 0;">
+    <div class="flex-container">
+      <div id="slideshow1">
+        <div><img src="Images/QuizbowlTournament_EnvironmentPicture.jpg"></div>
+        <div><img src="http://farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg"></div>
+      </div>
+        <div class="welcomeContainer" style="width: 16.7%; margin: 0;">
         <br>
         <span class="welcomeLetter" rotY="0">W</span><br>
         <span class="welcomeLetter" rotY="0">E</span><br>
@@ -116,9 +137,14 @@
         <span class="welcomeLetter" rotY="0">O</span><br>
         <span class="welcomeLetter" rotY="0">M</span><br>
         <span class="welcomeLetter" style="margin-bottom: 0.6em" rotY="0">E</span>
-      </center>
-    </article>
-    <footer>
+      </div>
+      <div id="slideshow2">
+      </div>
+    </div>
+    <footer style="display: none;">
+      Website Created by David Chen &#8226;
+      <a href="Contact.html"> Colonel By Secondary School</a> &#8226;
+      <a href="#top"> Back to Top</a>
     </footer>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -128,7 +154,9 @@
     <script>
     $(document).ready(() => {
       //Welcome Animation
-      $(".welcomeContainer").delay(200).slideDown(1500);
+      $(".welcomeContainer").delay(200).slideDown(1500, function() {
+        $("footer").delay(200).slideDown("slow");
+      });
       //Welcome Letter Animations
       var rotY;
       $(".welcomeLetter").on("mouseenter", event => {
@@ -136,6 +164,19 @@
     		$(event.currentTarget).css("transform", "rotateY("+ (rotY) + "deg)");
         $(event.currentTarget).attr("rotY", rotY);
       });
+      // Slideshows NOTE: WORKING ON THIS PART
+      $("#slideshow#1").css("background-color", "#595959");
+      $("#slideshow#2").css("background-color", "#595959");
+
+      $("#slideshow1 > div:gt(0)").hide();
+      setInterval(function() {
+        $('#slideshow1 > div:first')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(1000)
+        .end()
+        .appendTo('#slideshow1');
+      },  3000);
     });//jQuery
     </script>
   </body>
