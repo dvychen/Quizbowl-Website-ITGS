@@ -33,5 +33,5 @@ div.even-flex {
 .img-container img {
   max-height: 12em;
   max-width: 80%;
-  border: 2px solid orange;
+  border: 2px solid #e09d00;
 }
