@@ -1,0 +1,185 @@
+<HTML>
+  <head>
+    <title> Quizbowl - FAQ</title>
+    <link rel="icon" href="Images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen+Mono|Source+Sans+Pro|Staatliches|Luckiest+Guy|Passion+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/header.css">
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
+    <link rel="stylesheet" type="text/css" href="CSS/sixpack-flex-container.css">
+    <style>
+      header {
+        background-image: url(Images/QuizbowlClub_Studying.jpg);
+        color: crimson;
+        font-size: 180px;
+      }
+      .flex-container > div > div {
+        flex-direction: row;
+      }
+      .profile-pic {
+        border-radius: 50%;
+        max-height: 5em;
+        max-width: 5em;
+        display: inline-block;
+        transition: 0.5s;
+      }
+      .word-container-left {
+        display: inline-block;
+        text-align: right;
+      }
+      .word-container-right {
+        display: inline-block;
+        text-align: left;
+      }
+      .title {
+        font-family: "Staatliches", sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li style="width: 16%;" class="dropdown">
+          <a href="WhatIsQuizbowl.html" class="navElem" data-item="1">What is Quizbowl &nbsp;<span class="downArrow" style="border-color: #0085d8"></a><br>
+            <svg class="navUnderline" width="7.4em" data-line="1">
+              <line x1="0" y1="0" x2="10em" y2="0"/>
+            </svg>
+          <div class="dropdown-content" style="margin-left: 3.4%; width: 12.6%;">
+            <a href="FAQ.html"><span>FAQ</span></a>
+          </div>
+        </li>
+        <li style="width: 6%;" class="dropdown">
+          <a href="News.html" class="navElem" data-item="2">News &nbsp;<span class="downArrow"></a><br>
+          <svg class="navUnderline" width="2.8em" data-line="2">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+          <div class="dropdown-content" style="margin-left: 1%; width: 7%;">
+            <a href="Calendar.html"><span>Calendar</span></a>
+          </div>
+        </li>
+        <li style="width: 11%;">
+          <a href="Resources.html" class="navElem" data-item="3">Resources</a><br>
+          <svg class="navUnderline" width="4.4em" data-line="3">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+        </li>
+        <li style="width: 7%;" class="dropdown">
+          <a href="Media.html" class="navElem" data-item="4">Media &nbsp;<span class="downArrow"></span></a><br>
+          <svg class="navUnderline" width="3em" data-line="4">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+          <div class="dropdown-content" style="margin-left: 1.4%; width: 6%;">
+            <a href="Gallery.html"><span>Gallery</span></a>
+            <a href="Videos.html"><span>Videos</span></a>
+          </div>
+        </li>
+        <li class="banner">
+          <svg height="8em" width="100%" viewBox="0 0 100 18"> <!--viewBox allows SVG to scale with monitor size-->
+            <a href="index.html">
+              <polygon points="-6,-56 9,14 50.5,24 91,14 106,-56" class="bannerPolygon"/>
+              <foreignobject x="35%" y="-10" width="30" height="30" class="bannerPolygon"> <!--NOTE:Need to edit ths values if logo with different dimensions are used-->
+                <embed src="Images/QuizbowlLogo.png" width="30" height="30"/>
+              </foreignobject>
+            </a>
+          </svg>
+        </li>
+        <li style="width: 15%;">
+          <a href= "MeetTheTeam.html" class="navElem" data-item="5">Meet the Team</a><br>
+          <svg class="navUnderline" width="5.5em" data-line="5">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+        </li>
+        <li style="width: 11%;" class="dropdown">
+          <a href="Contact.html" class="navElem" data-item="6">Contact &nbsp;<span class="downArrow"></span></a><br>
+          <svg class="navUnderline" width="4em" data-line="6">
+            <line x1="0" y1="0" x2="8em" y2="0"/>
+          </svg>
+          <div class="dropdown-content" style="margin-left: 2.5%; width: 11%;">
+            <a href="SignUp.html"><span>Sign Up</span></a>
+          </div>
+        </li>
+        <li style="width: 14%;">
+          <a href="HallOfFame.html" class="navElem gilded" data-item="7">Hall of Fame</a><br>
+          <svg class="navUnderline" width="5em" data-line="7">
+            <line x1="0" y1="0" x2="8em" y2="0" style="stroke: #FFD700;"/>
+          </svg>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <center>
+        <header>
+          Meet the Team
+        </header>
+      </center>
+      <div class="flex-container">
+        <div>
+          <div> <!-- need a second div here so that this is vertically centered-->
+            <div class="word-container-left">
+              <span class="title">Senior Executive</span><br>
+              Kevin Li
+            </div>
+            <img src="Images/ProfilePictures/Profile_KevinLi.png" class="profile-pic"/>
+          </div>
+        </div>
+        <div class="even-flex">
+          <div>
+            <img src="Images/ProfilePictures/Profile_HertekGill.jpg" class="profile-pic"/>
+            <div class="word-container-right">
+              <span class="title">Senior Executive</span><br>
+              Hertek Gill
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div class="word-container-left">
+              <span class="title">Junior Executive</span><br>
+              David Hao
+            </div>
+            <img src="Images/ProfilePictures/Profile_DavidHao.jpg" class="profile-pic"/>
+          </div>
+        </div>
+        <div class="even-flex">
+          <div>
+            <img src="Images/ProfilePictures/Profile_XiaoLiu.jpg" class="profile-pic"/>
+            <div class="word-container-right">
+              <span class="title">Junior Executive</span><br>
+              Xiao Yan Liu
+            </div>
+          </div>
+        </div>
+        <div style="width: 100%; border: 0; margin: 0;">
+          <div>
+            <span class="title" style="font-size: 40px;">Supervising Teacher</span><br>
+            <img src="Images/ProfilePictures/Profile_MsReiche.jpg" class="profile-pic" style="display: inline;"/><br>
+            <span style="margin-top: 0.5em;">Ms. Reiche</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Website Created by David Chen &#8226;
+      <a href="Contact.html"> Colonel By Secondary School</a> &#8226;
+      <a href="#top"> Back to Top</a>
+      <!-- <img src="Images/QuizbowlLogo.png" style="max-height: 90%; display: inline;" /> -->
+    </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script>
+    var $profilePic;
+    $(".flex-container > div > div").on("mouseenter", event => {
+      $profilePic = $(event.currentTarget).children("img");
+      $profilePic.css("max-width", "9em").css("max-height", "9em");
+    }).on("mouseleave", event => {
+      $profilePic.css("max-width", "5em").css("max-height", "5em");
+    });
+    </script>
+    <script src="Scripts/navbar.js"></script>
+  </body>
+</HTML>
