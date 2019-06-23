@@ -1,0 +1,204 @@
+<HTML>
+  <head>
+    <title> Quizbowl - Hall of Fame</title>
+    <link rel="icon" href="Images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen+Mono|Source+Sans+Pro|Staatliches|Luckiest+Guy|Passion+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
+    <link rel="stylesheet" type="text/css" href="CSS/header.css">
+    <link rel="stylesheet" type="text/css" href="CSS/footer.css">
+    <link rel="stylesheet" type="text/css" href="CSS/sixpack-flex-container.css">
+    <style>
+      header {
+        background-image: url(Images/HallOfFame/RedCurtains.png);
+        background-attachment: scroll;
+        background-size: auto;
+        color: gold;
+        font-size: 180px;
+        text-shadow: 5px 5px yellow;
+      }
+      .flex-container > div {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .flex-container > div > div {
+        flex-direction: row;
+      }
+      .profile-pic {
+        display: inline-block;
+        transition: 0.5s;
+      }
+      .word-container-left {
+        display: inline-block;
+        text-align: right;
+      }
+      .word-container-right {
+        display: inline-block;
+        text-align: left;
+      }
+      .title {
+        font-family: "Staatliches", sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 0.5em;
+      }
+      .subtitle {
+        font-size: 20px;
+      }
+      p {
+        text-align: left;
+      }
+      .flex-container > div.even-flex {
+        background-color: #3d3d3d;
+        color: gold;
+        font-family: "Source Sans Pro", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="footer-container">
+      <nav>
+        <ul>
+          <li style="width: 16%;" class="dropdown">
+            <a href="WhatIsQuizbowl.html" class="navElem" data-item="1">What is Quizbowl &nbsp;<span class="downArrow"></a><br>
+              <svg class="navUnderline" width="7.4em" data-line="1">
+                <line x1="0" y1="0" x2="10em" y2="0"/>
+              </svg>
+            <div class="dropdown-content" style="margin-left: 3.4%; width: 12.6%;">
+              <a href="FAQ.html"><span>FAQ</span></a>
+            </div>
+          </li>
+          <li style="width: 6%;" class="dropdown">
+            <a href="News.html" class="navElem" data-item="2">News &nbsp;<span class="downArrow"></a><br>
+            <svg class="navUnderline" width="2.8em" data-line="2">
+              <line x1="0" y1="0" x2="8em" y2="0"/>
+            </svg>
+            <div class="dropdown-content" style="margin-left: 1%; width: 7.5%;">
+              <a href="Calendar.html"><span>Calendar</span></a>
+            </div>
+          </li>
+          <li style="width: 11%;">
+            <a href="Resources.html" class="navElem" data-item="3">Resources</a><br>
+            <svg class="navUnderline" width="4.4em" data-line="3">
+              <line x1="0" y1="0" x2="8em" y2="0"/>
+            </svg>
+          </li>
+          <li style="width: 7%;" class="dropdown">
+            <a href="Media.html" class="navElem" data-item="4">Media &nbsp;<span class="downArrow"></span></a><br>
+            <svg class="navUnderline" width="3em" data-line="4">
+              <line x1="0" y1="0" x2="8em" y2="0"/>
+            </svg>
+            <div class="dropdown-content" style="margin-left: 1.4%; width: 6.5%;">
+              <a href="Gallery.html"><span>Gallery</span></a>
+              <a href="Videos.html"><span>Videos</span></a>
+            </div>
+          </li>
+          <li class="banner">
+            <svg height="8em" width="100%" viewBox="0 0 100 18"> <!--viewBox allows SVG to scale with monitor size-->
+              <a href="index.html">
+                <polygon points="-6,-56 9,14 50.5,24 91,14 106,-56" class="bannerPolygon"/>
+                <foreignobject x="35%" y="-10" width="30" height="30" class="bannerPolygon"> <!--NOTE:Need to edit ths values if logo with different dimensions are used-->
+                  <embed src="Images/QuizbowlLogo.png" width="30" height="30"/>
+                </foreignobject>
+              </a>
+            </svg>
+          </li>
+          <li style="width: 15%;">
+            <a href= "MeetTheTeam.html" class="navElem" data-item="5">Meet the Team</a><br>
+            <svg class="navUnderline" width="5.5em" data-line="5">
+              <line x1="0" y1="0" x2="8em" y2="0"/>
+            </svg>
+          </li>
+          <li style="width: 11%;" class="dropdown">
+            <a href="ContactUs.html" class="navElem" data-item="6">Contact Us &nbsp;<span class="downArrow"></span></a><br>
+            <svg class="navUnderline" width="5.2em" data-line="6">
+              <line x1="0" y1="0" x2="8em" y2="0"/>
+            </svg>
+            <div class="dropdown-content" style="margin-left: 2.5%; width: 11%;">
+              <a href="SignUp.html"><span>Sign-Up</span></a>
+            </div>
+          </li>
+          <li style="width: 14%;">
+            <a href="HallOfFame.html" class="navElem gilded active" data-item="7">Hall of Fame</a><br>
+            <svg class="navUnderline" width="5em" data-line="7">
+              <line x1="0" y1="0" x2="8em" y2="0" style="stroke: #FFD700;"/>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+      <div class="margin-container">
+        <center>
+          <header>
+            Hall of Fame
+          </header>
+        </center>
+        <div class="flex-container" style="border-width: 0px;">
+          <div>
+            <div> <!-- need a second div here so that this is vertically centered-->
+              <div class="word-container-left">
+                <span class="title">Kevin Le</span><br>
+                History God<br>
+                <span class="subtitle">Class of 2018</span>
+              </div>
+              <img src="Images/HallOfFame/KevinLe.jpg" class="profile-pic" style="max-width: 9em; max-height: 9em;"/>
+            </div>
+          </div>
+          <div class="even-flex">
+            <p>
+              Recently, Kevin Le has been the success story of the last few years and his input earned the third spot at last years nationals
+              and his placement as fourth internationally in the International History Olympiad. He graduated in 2018 and left us to continue the legacy.
+            </p>
+          </div>
+          <div>
+            <div>
+              <div class="word-container-left">
+                <span class="title">Ted Gan &</span><br>
+                <span class="title">Cameron Amini</span><br>
+                Dynamic Duo<br>
+                <span class="subtitle">Class of 2015</span>
+              </div>
+              <img src="Images/HallOfFame/TedGanCameronAmini.jpg" class="profile-pic" style="max-width: 10em; max-height: 10em;"/>
+            </div>
+          </div>
+          <div class="even-flex">
+            <div>
+              <p>
+                In Ted Gan and Cameron Amini's generation, Quizbowl at Colonel By became a popular and mainstay club and
+                transitioned from pure Reach for the Top to Quizbowl, where Colonel By won many regional and national championships.
+              </p>
+            </div>
+          </div>
+          <div style="width: 100%; border: 0; margin: 0; height: 3em;">
+            <div>
+              Feeling <span style="color: gold; text-shadow: 2px 1px #0085d8; font-weight: bold;"> inspired</span>? You could very well be next on here!
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        Website Created by David Chen &#8226;
+        <a href="http://www.colonelby.com/" target="_blank"> Colonel By Secondary School</a> &#8226;
+        <a href="#top"> Back to Top</a>
+      </footer>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script>
+    var $profilePic, maxW, maxH;
+    $(".flex-container > div > div").on("mouseenter", event => {
+      $profilePic = $(event.currentTarget).children("img");
+      maxW = ($profilePic.css("max-width"));
+      maxH = ($profilePic.css("max-height"));
+      console.log($profilePic.css("max-width") + " " + maxH);
+      $profilePic.css("max-width", "12em").css("max-height", "12em");
+      $(event.currentTarget).children().children(".title").css("color", "#0085d8");
+    }).on("mouseleave", event => {
+
+      $profilePic.css("max-width", maxW).css("max-height", maxH);
+      $(event.currentTarget).children().children("span").css("color", "black");
+    });
+    </script>
+    <script src="Scripts/navbar.js"></script>
+  </body>
+</HTML>
