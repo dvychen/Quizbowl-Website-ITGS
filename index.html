@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oxygen+Mono|Source+Sans+Pro|Staatliches|Luckiest+Guy|Passion+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="CSS/navbar.css">
     <link rel="stylesheet" type="text/css" href="CSS/footer.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fat-button.css">
     <style>
       .banner {
         width: 20%;
@@ -12,19 +13,6 @@
         background-color: white;
         height: 4em;
         border-bottom: black 2px solid;
-      }
-      button {
-        width: 70%;
-        min-height: 2em;
-        font-family: "Luckiest Guy", sans-serif;
-        font-size: 72px;
-        background-color: #a3dbff;
-        color: black;
-        border: 0;
-      }
-      button:hover {
-        background-color: dodgerblue;
-        color: white;
       }
       div.flex-container {
         display: flex;
@@ -39,6 +27,9 @@
         text-align: center;
         line-height: 0.8em;
         background: linear-gradient(#009bff, #a3dbff); /*dark blue to very light blue*/
+      }
+      .fat-button {
+        width: 70%;
       }
       span.welcomeLetter {
         display: inline-block;
@@ -85,7 +76,7 @@
       }
       footer {display: none;}
       .footer-container {
-        padding: 0;
+        /*padding: 0;*/
       }
     </style>
   </head>
@@ -165,7 +156,7 @@
         <div class="slide"><img src="Images/QuizbowlClub_YearbookPicture.jpg"></div>
         <div class="slide"><img src="Images/QuizbowlClub_LongTable.jpg"></div>
         <div class="slide"><img src="Images/DavidHao_Portrait.jpg" style="transform: rotate(90deg);"></div>
-        <div class="slide"><a href="News.html"><button>LATEST NEWS<i class="rightArrow"></i></button></a></div>
+        <div class="slide"><a href="News.html"><button class="fat-button">LATEST NEWS<i class="rightArrow"></i></button></a></div>
       </div>
       <div class="welcomeContainer" style="width: 16.7%; margin: 0;">
         <br>
@@ -181,12 +172,12 @@
         <div class="slide"><img src="Images/QuizbowlClub_Quizzing.jpg"></div>
         <div class="slide"><img src="Images/QuizbowlClub_Smiling.jpg"></div>
         <div class="slide"><img src="Images/QuizbowlClub_Corner.jpg"></div>
-        <div class="slide"><a href="SignUp.html"><button>SIGN UP</button></a></div>
+        <div class="slide"><a href="SignUp.html"><button class="fat-button">SIGN UP</button></a></div>
       </div>
     </div>
     <footer>
       Website Created by David Chen &#8226;
-      <a href="ContactUs.html"> Colonel By Secondary School</a> &#8226;
+      <a href="http://www.colonelby.com/" target="_blank"> Colonel By Secondary School</a> &#8226;
       <a href="#top"> Back to Top</a>
     </footer>
     </div>
