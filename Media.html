@@ -7,7 +7,12 @@
     <link rel="stylesheet" type="text/css" href="CSS/header.css">
     <link rel="stylesheet" type="text/css" href="CSS/footer.css">
     <link rel="stylesheet" type="text/css" href="CSS/sixpack-flex-container.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fat-button.css">
     <style>
+    .fat-button {
+      width: 5em;
+      margin: 0 .7em 0 0.7em;
+    }
       header {
         background-image: url("Images/QuizbowlClub_Randhir.jpg");
         color: #0085d8;
@@ -15,9 +20,16 @@
         padding-top: 130px;
         padding-bottom: 130px;
       }
-      .calendar-container {
+      .vid-container {
         text-align: center;
-        margin: 1em 0 1em 0;
+        margin: 80px 0 80px 0;
+      }
+      .button-container {
+        text-align: center;
+        margin: 0em 0em 40px 0em;
+      }
+      iframe {
+        border: 6px solid gold;
       }
     </style>
   </head>
@@ -35,7 +47,7 @@
             </div>
           </li>
           <li style="width: 6%;" class="dropdown">
-            <a href="News.html" class="navElem" data-item="2">News &nbsp;<span class="downArrow" style="border-color: #0085d8"></a><br>
+            <a href="News.html" class="navElem" data-item="2">News &nbsp;<span class="downArrow"></a><br>
             <svg class="navUnderline" width="2.8em" data-line="2">
               <line x1="0" y1="0" x2="8em" y2="0"/>
             </svg>
@@ -50,7 +62,7 @@
             </svg>
           </li>
           <li style="width: 7%;" class="dropdown">
-            <a href="Media.html" class="navElem" data-item="4">Media &nbsp;<span class="downArrow"></span></a><br>
+            <a href="Media.html" class="navElem active" data-item="4">Media &nbsp;<span class="downArrow"></span></a><br>
             <svg class="navUnderline" width="3em" data-line="4">
               <line x1="0" y1="0" x2="8em" y2="0"/>
             </svg>
@@ -95,16 +107,20 @@
       <div class="margin-container">
         <center>
           <header>
-            MEDIA
+            Media
           </header>
         </center>
-        <div class="calendar-container"><!--NOTE GET THE REAL CALENDAR. CRITERION E!!! https://support.google.com/calendar/answer/41207?hl=en -->
-          <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ocdsb.ca_7sm8o281q4fvqgblf1814dd2bg%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FToronto" style="border-width:0" width="60%" height="600" frameborder="0" scrolling="no"></iframe>
+        <div class="vid-container">
+          <iframe width="1000px" height="562.5px" src="https://www.youtube.com/embed/bzOCvFfP7NA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="button-container">
+          <a href="Gallery.html"><button class="fat-button">GALLERY</button></a>
+          <a href="Videos.html"><button class="fat-button">VIDEOS</button></a>
         </div>
       </div>
       <footer>
         Website Created by David Chen &#8226;
-        <a href="ContactUs.html"> Colonel By Secondary School</a> &#8226;
+        <a href="http://www.colonelby.com/" target="_blank"> Colonel By Secondary School</a> &#8226;
         <a href="#top"> Back to Top</a>
       </footer>
     </div>
