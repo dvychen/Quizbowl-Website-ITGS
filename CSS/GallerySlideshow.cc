@@ -1,0 +1,30 @@
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: 100%
+}
+.slideshow-container {
+  width: 950px;
+  max-height: 500px;
+  position: relative;
+  margin: auto;
+  background-color: black;
+  border: 2px solid teal;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
