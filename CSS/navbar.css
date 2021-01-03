@@ -60,9 +60,6 @@ body {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-.gilded:hover {
-  color: #dbb800;
-}
 nav {
   text-transform: uppercase;
   /* font-weight: bold; */
@@ -100,10 +97,16 @@ nav ul li a {
   padding-bottom: 0;
   display: block;
 }
+.gilded:hover {
+  color: #dbb800;
+}
 nav ul li a.active {
   color: dodgerblue;
   pointer-events: none;
   cursor: default;
+}
+nav ul li a.active.gilded {
+   color: #dbb800;
 }
 nav ul li a:hover:not(.active):not(.gilded), .dropdown:hover .dropbtn {
   color: #0085d8;

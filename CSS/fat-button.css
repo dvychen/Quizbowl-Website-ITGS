@@ -1,0 +1,12 @@
+.fat-button {
+  height: 2em;
+  font-family: "Luckiest Guy", sans-serif;
+  font-size: 72px;
+  background-color: #a3dbff;
+  color: black;
+  border: 0;
+}
+.fat-button:hover {
+  background-color: dodgerblue;
+  color: white;
+}
