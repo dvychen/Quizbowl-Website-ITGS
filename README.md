@@ -3,6 +3,8 @@ Website designed to fit the needs of the Colonel By S.S. Quizbowl Club.
 
 Link: https://cbquizbowl.neocities.org
 
+<hr />
+
 Some sources of inspiration:
 - http://spaceengine.org/
     - ^ excellent, consistent theme
